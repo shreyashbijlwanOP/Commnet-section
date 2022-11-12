@@ -69,14 +69,14 @@ let comments = new Comments("commentList")
 display();
 function display()
 {
-    output.innerHTML = ""
-    console.log(comments.getCollection)
-    if(!comments.getCollection.length)
-    {
-        output.innerHTML="<h2 align='center'> no comment  here </h2>"
-    }
-    else{
    
+    console.log(comments.getCollection)
+     output.innerHTML="<h2 align='center'> no comment  here </h2>"
+    if(comments.getCollection.length>0)
+    {
+       
+
+    output.innerHTML = ""
     comments.getCollection.forEach(element => {
         output.innerHTML+= `
         <div class="comment">
